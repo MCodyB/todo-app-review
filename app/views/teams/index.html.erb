@@ -1,0 +1,14 @@
+<h2>The Teams Page</h2>
+<h5>Under construction since 2009</h5><br><br>
+<%= link_to "Start a new team", new_team_url%>
+
+<%@teams.each do |team|%>
+
+  <ol>
+    <li>
+      <%= link_to team.title, team_url(team.id)%>
+    </li>
+  </ol>
+<% end %>
+
+

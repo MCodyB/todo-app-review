@@ -5,7 +5,10 @@
 
   <%= f.label(:description, "Description:")%><br>
   <%= f.text_area(:description)%>
-  <br><br>
+  <br>
+	<%= f.select :team_id, Team.all.map { |team| [team.title, team.id] } %><br>
+  <br>
+  
   <%= f.submit%>
 
 <% end %>
