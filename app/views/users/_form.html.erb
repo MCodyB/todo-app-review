@@ -1,0 +1,16 @@
+<%= form_for(@user, html: {multipart: true}) do |f| %>
+
+  <%= f.label(:name, "User Name:")%>
+  <%= f.text_field(:name)%><br>
+  <ul>
+    <% Team.all.each do |team| %>
+        <li>
+	        <%= check_box_tag 'team_ids[]', team.id %>
+	        <%= team.title %>
+	      </li>
+	  <% end %>
+    
+  </ul>
+  <%= f.submit%>
+
+<% end %>
