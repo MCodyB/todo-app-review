@@ -1,15 +1,25 @@
 <h1>Team: <%= @team.title %></h1>
 <br><br>
+
 <h3>Projects<h3>
   <ul>
-
     <% @team.projects.each do |project| %>
+
     <li>
       <%= link_to "#{project.title}", project_url(project.id)%>
     </li>
-<% end%>
-</ul>
+    <% end%>
+  </ul>
+<h3>Users<h3>
+  <ul>
+    <% @team.users.each do |user| %>
 
-<%= link_to "Add project", new_project_url%>
+    <li>
+      <%= link_to "#{user.name}", user_url(user.id)%>
+    </li>
+    <% end%>
+  </ul>
+
+<%= link_to "Add project", new_team_project_url(@team.id)%>
 
 <%= link_to "Edit this team", edit_team_url(@team.id)%>

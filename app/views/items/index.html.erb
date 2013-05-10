@@ -1,5 +1,7 @@
 <h4>The Items Page</h4><br>
-<%= link_to "Add a new item", new_item_url%>
+<%= link_to "Add a new item", new_item_url(:project_id => params[:project_id])%>
+
+
 
 <%@items.each do |item|%>
 

@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
+    @items = Project.find(params[:project_id]).items
   end
 
   def show

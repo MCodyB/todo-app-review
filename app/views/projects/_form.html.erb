@@ -1,4 +1,4 @@
-<%= form_for(@project, html: {multipart: true}) do |f| %>
+<%= form_for([@team, @project], html: {multipart: true}) do |f| %>
 
   <%= f.label(:title, "Project Title:")%>
   <%= f.text_field(:title)%><br>
@@ -6,9 +6,9 @@
   <%= f.label(:description, "Description:")%><br>
   <%= f.text_area(:description)%>
   <br>
-	<%= f.select :team_id, Team.all.map { |team| [team.title, team.id] } %><br>
+	 <%= f.select :team_id, Team.all.map { |team| [team.title, team.id] }, :selected => params[:team_id] %>
   <br>
-  
+
   <%= f.submit%>
 
 <% end %>
