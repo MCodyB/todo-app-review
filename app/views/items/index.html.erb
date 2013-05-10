@@ -1,0 +1,18 @@
+<h4>The Items Page</h4><br>
+<%= link_to "Add a new item", new_item_url%>
+
+<%@items.each do |item|%>
+
+  <ol>
+    <li>
+      <%= link_to item.title, item_url(item.id)%>
+    </li>
+      <ul>
+        <li>
+          <%= item.description%>
+        </li>
+      </ul>
+    </ol>
+<% end %>
+
+

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TodoApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>Lazi-Projects Inc</title>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <pre>
+    <%= params%>
+  </pre>
+  <%= link_to "See all projects", projects_url %>
+  <h1>Lazi-Projects Inc</h1>
+  <h4>Incorporation Pending</h4>
 
 <%= yield %>
 

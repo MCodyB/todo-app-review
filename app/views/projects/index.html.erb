@@ -1,0 +1,19 @@
+<h2>The Projects Page</h2>
+<h5>Under construction since 2009</h5><br><br>
+<%= link_to "Start a new project", new_project_url%>
+
+<%@projects.each do |project|%>
+
+  <ol>
+    <li>
+      <%= link_to project.title, project_url(project.id)%>
+    </li>
+      <ul>
+        <li>
+          <%= project.description%>
+        </li>
+      </ul>
+    </ol>
+<% end %>
+
+

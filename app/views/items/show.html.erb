@@ -1,0 +1,7 @@
+<h1><%= @item.title%> Completed: <%= @item.completed %></h1>
+<p><%= @item.description %><p>
+<br><br>
+
+<%= link_to "Edit this item", edit_item_url(@item.id)%>
+<%= link_to "Project overview", project_url(@item.project_id)%>
+

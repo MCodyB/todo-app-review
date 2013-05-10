@@ -1,0 +1,18 @@
+<%= form_for(@item, html: {multipart: true}) do |f| %>
+  <%= f.hidden_field :project_id %>
+
+  <%= f.label(:title, "Item Title:")%>
+  <%= f.text_field(:title)%><br>
+
+  <%= f.label(:description, "Description:")%><br>
+  <%= f.text_area(:description)%><br>
+
+  <%= f.label(:completed, "Item completed? True:")%>
+  <%= f.radio_button(:completed, true)%>
+  <%= f.label(:completed, "False:")%>
+  <%= f.radio_button(:completed, false)%><br>
+
+  <br><br>
+  <%= f.submit%>
+
+<% end %>
