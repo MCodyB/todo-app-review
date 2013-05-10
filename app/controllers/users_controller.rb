@@ -13,7 +13,6 @@ class UsersController <ApplicationController
 
   def create
     @user = User.new(params[:user])
-    #TMembership.find_or_create_by(@user.id)
     if @user.save
       redirect_to user_url(@user.id)
     else
@@ -27,7 +26,7 @@ class UsersController <ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.update_attributes(params[:id])
+    @user.update_attributes(params[:user])
 
     redirect_to user_url(@user.id)
 

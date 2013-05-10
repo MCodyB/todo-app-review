@@ -3,6 +3,13 @@
   <%= f.label(:title, "Team Title:")%>
   <%= f.text_field(:title)%><br>
 
+  <% User.all.each do |user| %>
+      <li>
+        <%= check_box_tag 'user_ids[]', user.id %>
+        <%= user.name %>
+      </li>
+  <% end %>
+
   <br><br>
   <%= f.submit%>
 

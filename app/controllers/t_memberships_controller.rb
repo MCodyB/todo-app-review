@@ -1,3 +1,3 @@
-class TMemberships < ActiveRecord::Base
+class TMembershipsController < ApplicationController
 
 end
