@@ -8,9 +8,9 @@
   <%= f.text_area(:description)%><br>
 
   <%= f.label(:completed, "Item completed? True:")%>
-  <%= f.radio_button(:completed, true)%>
+  <%= f.radio_button(:completed, 1)%>
   <%= f.label(:completed, "False:")%>
-  <%= f.radio_button(:completed, false)%><br>
+  <%= f.radio_button(:completed, 0)%><br>
 
   <br><br>
   <%= f.submit%>
