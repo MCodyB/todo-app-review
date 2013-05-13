@@ -8,5 +8,6 @@ TodoApp::Application.routes.draw do
   end
   resources :users
 
+  # REV: root path should be put at the top
   root to: "teams#index"
 end

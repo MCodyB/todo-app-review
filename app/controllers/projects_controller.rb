@@ -30,5 +30,5 @@ class ProjectsController < ApplicationController
 
     redirect_to project_url(@project.id)
   end
-
+  # REV: sometimes you have an empty line between the last method and the end of the class
 end

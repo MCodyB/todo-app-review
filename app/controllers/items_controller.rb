@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
+    # REV: should check if the updated attributes are valid and fill out the form again with errors if not
     @item.update_attributes(params[:item])
 
     redirect_to project_url(@item.project_id)

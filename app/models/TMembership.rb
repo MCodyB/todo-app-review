@@ -3,4 +3,6 @@ class TMembership < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :team
+
+  # REV: should validate that both ids exist
 end
